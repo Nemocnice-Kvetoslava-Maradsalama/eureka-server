@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  eureka-server:
+    build: .
+    environment:
+      EUREKA_HOSTNAME: localhost
+      EUREKA_ENV: dev
+    ports:
+      - 8761:8761

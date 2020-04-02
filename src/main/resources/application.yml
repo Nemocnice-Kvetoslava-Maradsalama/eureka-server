@@ -4,12 +4,12 @@ spring:
     prefer-file-system-access: false
 
 server:
-  port: 8761
+  port: ${EUREKA_PORT:8761}
 
 eureka:
-  environment: dev
+  environment: ${EUREKA_ENV:dev}
   instance:
-    hostname: localhost
+    hostname: ${EUREKA_HOSTNAME:localhost}
     appName: eureka-server
   client:
     registerWithEureka: false
