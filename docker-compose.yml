@@ -8,3 +8,10 @@ services:
       EUREKA_ENV: dev
     ports:
       - 8761:8761
+    networks:
+      - nkm
+
+networks:
+  nkm:
+    external:
+      name: nemocnice-network
